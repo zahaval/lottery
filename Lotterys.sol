@@ -45,7 +45,7 @@ contract Lottery is Ownable {
         return uint256(combinedHash);
     }
 
-    // Callback function used by Chainlink VRF to return the randomness
+    // Callback function used  to return the randomness
     function pickWinner(uint256) internal {
         require(isLotteryActive, "Lottery is not active");
         randomResult = generateRandomNumber();
